@@ -1,0 +1,37 @@
+{
+  "name": "nodeapi-template",
+  "version": "1.0.0",
+  "description": "Its to make easier for myself to generate boilerplate code for making nodejs based apis",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MehfoozurRehman/nodeapi-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MehfoozurRehman/nodeapi-template/issues"
+  },
+  "homepage": "https://github.com/MehfoozurRehman/nodeapi-template#readme",
+  "dependencies": {
+    "@vpriem/express-api-key-auth": "^1.0.7",
+    "axios": "^1.2.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "express-rate-limit": "^6.7.0",
+    "express-slow-down": "^1.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
