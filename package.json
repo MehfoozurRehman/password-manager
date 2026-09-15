@@ -4,8 +4,8 @@
   "description": "Its to make easier for myself to generate boilerplate code for making nodejs based apis",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "dev": "node api.js && nodemon src/index.js",
+    "start": "node api.js && node src/index.js"
   },
   "repository": {
     "type": "git",
