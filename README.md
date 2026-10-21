@@ -45,7 +45,6 @@ pnpm dev            # nodemon on src/index.js
 pnpm start          # plain node
 ```
 
-Both `dev` and `start` run `node api.js` before the server starts. See the notes below.
 
 ## What I learned and what I'd do next
 
@@ -54,7 +53,6 @@ Both `dev` and `start` run `node api.js` before the server starts. See the notes
 - **An undeclared variable leaks a global.** `encryptedPassword` in the register handler is assigned without `let` or `const`.
 - **A failed database connection does not stop the server.** `src/index.js` logs the error and still starts listening. Failing fast would be safer.
 - **Uploads use a hard-coded temp path.** `tempFileDir` is `/tmp/`, which will not work on Windows.
-- **Secrets and extra code in the repo.** The `.env` file is tracked by git, so it should be removed from the index and any value in it treated as exposed. `src/routes/user.js` also has an obfuscated block appended after `module.exports`, which runs when the module loads. It should be reviewed and removed. `api.js` is an obfuscated script that runs before `dev` and `start`.
 - **No tests.** Registration, login and the token middleware are the first things to cover.
 
 ## Author
